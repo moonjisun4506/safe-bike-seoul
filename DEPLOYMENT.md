@@ -1,10 +1,10 @@
 ﻿# GitHub 업로드와 Vercel 배포
 
-이 문서는 준비된 소스를 사용자가 GitHub와 Vercel에 올리는 절차입니다. 원격 저장소 생성, push, 실제 배포는 아직 수행하지 않았습니다.
+이 문서는 준비된 소스를 사용자가 GitHub와 Vercel에 올리는 절차입니다. GitHub 저장소 https://github.com/moonjisun4506/safe-bike-seoul 의 main 브랜치로 업로드했습니다. 실제 Vercel 배포는 아직 수행하지 않았습니다.
 
 ## 1. 업로드할 폴더
 
-`safe-bike-seoul` 폴더 자체를 저장소 루트로 사용하세요. 상위 `따릉이` 폴더에는 별도 `.env`가 있으므로 상위 폴더 전체를 업로드하지 마세요. Git main 브랜치를 로컬에 초기화했으며 아직 커밋과 원격 저장소는 없습니다.
+`safe-bike-seoul` 폴더 자체를 저장소 루트로 사용하세요. 상위 `따릉이` 폴더에는 별도 `.env`가 있으므로 상위 폴더 전체를 업로드하지 마세요. Git main 브랜치와 origin 원격 저장소가 설정되어 있습니다. 아래 초기 업로드 절차는 새 저장소에 옮길 때 참고하고, 현재 저장소의 후속 변경은 commit 후 git push로 올리면 됩니다.
 
 공유할 파일은 `src/`, `public/`, `scripts/`, package.json/package-lock.json, Next.js/TypeScript/ESLint 설정, vercel.json, 이 문서와 README, **값이 비어 있는 `.env.example`**입니다. `.env*` 실파일, 인증서/개인키, `.next`, node_modules, Vercel 로컬 상태, 로그, QA 스크린샷은 `.gitignore` 및 `.vercelignore`에서 제외했습니다. `.env`는 GitHub 웹 업로드에도 직접 선택하지 마세요. GitHub 웹 파일 업로드는 로컬 .gitignore 적용을 보장하지 않습니다.
 
@@ -107,3 +107,4 @@ npm.cmd run check:client
 ```
 
 로컬 프로덕션 빌드 성공은 Vercel 배포 및 원격 제공기관 연결 성공과 별개입니다. 실제 배포 전후에 위의 Production URL 검사를 수행하세요.
+
